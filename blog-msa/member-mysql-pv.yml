@@ -1,0 +1,13 @@
+﻿apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: member-mysql-pv
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: "/home/intellijunho/data/mysql"
+  storageClassName: ""
